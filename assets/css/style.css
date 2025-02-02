@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:  'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 144, 100, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px #ffa581;
+    overflow: hidden;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-list-item {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    margin: 0 15px;
+    list-style: none;
+}
+
+.header-list-item:last-child {
+    margin-right: 0;
+}
+
+.header-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* HOME */
+.home {
+    padding: 80px 0;
+    background-color: var(--ograne-primary);
+}
+
+.home-avatar {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    border-radius: 50%;
+    border: 8px solid var(--white);
+    box-shadow: 0 0 50px var(--white);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    /* margin: auto; */
+    margin-top: 50px;
+}
+
+.home-title {
+    font-family: var(--big-title);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.home-sub-title {
+    margin-top: 30px;
+    color: var(--text-black);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--big-title);
+}
+
+.home-link,
+.home-describe-content {
+    margin-top: 100px;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+}
+
+.home-describe-heading {
+    font-weight: bold;   
+}
+
+.home-describe-text {
+    margin-top: 10px;
+}
+
+.home-social {
+    margin: auto;
+}
+
+.home-social-list {
+    margin-top: 80px;
+    list-style: none;
+}
+
+.home-social-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.home-social-item {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all .3s ease-in-out;
+}
+
+.home-social-item > i {
+    font-size: 2rem;
+}
+
+.home-social-item:hover {
+    transform: translateY(-6px);
+    transition: all .3s ease-in-out;
+}
+
+
+/* ABOUT */
+.about {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+
+
+.about-description-content {
+    margin-right: 90px;
+    text-align: justify;
+}
+
+
+
+.about-description-heading {
+    font-size: 2rem;
+    font-family: var(--big-title);
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.about-description-text {
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-description-subtext {
+    color: var(--ograne-primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* SKILLS */
+.about-skill {
+    margin-top: 90px;
+    margin-right: 20px;
+}
+
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--ograne-primary);
+}
+
+.details-title {
+    color: var(--text-black);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.bar{
+    position: relative;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.bar div{
+    position: relative;
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--ograne-primary);
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+}
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 50%;
+    }
+}
+
+footer {
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+
+  
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+    /* HEADER */
+    .header-list {
+        float: left;
+    }
+
+    .header-list-item {
+        margin: 0 4px;
+        padding: 8px 10px;
+    }
+
+    .header-list-item:first-child {
+        margin-right: 2px;
+    }
+    
+    /* HOME */
+    .home-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .home-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .home-sub-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .home-describe-content {
+        margin-top: 30px;
+        margin-left: 50px;
+        text-align: justify;
+    }
+    .home-describe-text {
+        text-align: justify;
+    }
+
+    .about-description-content {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .about-skill {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
